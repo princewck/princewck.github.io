@@ -3,7 +3,7 @@ require.config({
     waitSeconds:0,
     paths: {
         "angular":"//cdn.bootcss.com/angular.js/1.4.6/angular.min",
-        'angular-route':"http://cdn.bootcss.com/angular.js/1.4.6/angular-route.min",
+        'angular-route':"//cdn.bootcss.com/angular.js/1.4.6/angular-route.min",
         'angular-require': "public/angular-require/angular-require.min",
         'bootstrap':"//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min",
         "jquery":"//cdn.bootcss.com/jquery/2.1.4/jquery.min",
