@@ -1,0 +1,22 @@
+<div class="w well" style="overflow:auto;" id="{{ckId}}">
+	<label class="col-sm-3 control-label mt10">{{ckLabel}}:</label>
+	<div class="col-sm-6 img-disp mt10">   
+		<ul>       
+			<li ng-repeat = "image in images track by $index" class="mt5" style="display:inline-block;position:relative;height:80px;width:auto;">
+				<img alt="pkt-image" id="category-image" ng-src="{{image}}" style="height:100%;">
+				<p class="pkt-uploader-del" style="position:absolute;bottom:0;right:0;float:right;color:#d2d6de;background-color:rgba(0,0,0,.5);cursor:pointer;">删除</p>
+			</li>   
+		</ul>
+	</div>   
+	<div class="col-sm-3 mt10">
+		<form>       
+		<div id="progress" class="progress mt10" role="progressbar" style="background-color:#fff">           
+			<div class="progress-bar progress-bar-striped progress-bar-warning active" role="progressbar"  style="width: 0%;text-align:right;"></div>       
+		</div>       
+		<span class="btn btn-success fileinput-button mt15">           
+			<i class="glyphicon glyphicon-plus"></i><span class="progress-text">上传</span>           
+			<input id="pkt-uploader" type="file" name="uploadFile" />
+		</span>
+		</form>
+	</div>
+</div>

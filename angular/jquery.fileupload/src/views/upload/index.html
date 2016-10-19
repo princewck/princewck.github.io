@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="page-header">
+        <h3>file upload</h3>
+    </div>
+    <div class="col-md-offset-3 col-md-6">
+        <div pkt-uploader="orderDataUploader"
+             pkt-uploader-file="file"
+             pkt-uploader-action="../api/admin/dataimport/tmall"
+             pkt-uploader-multi=1
+             pkt-uploader-type='image'
+             pkt-uploader-callback="fileUpload.uploadOptions.onUploaded"
+             pkt-uploader-data="fileUpload.uploadOptions.uploadData()" >
+        </div>
+    </div>
+</div>
