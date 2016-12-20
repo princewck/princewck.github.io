@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     csso = require('gulp-csso'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
     pump = require('pump'),
     notify = require('gulp-notify');
 
@@ -10,18 +11,15 @@ gulp.task('default', ['csso', 'compressJs']);
 gulp.task('csso', function () {
     return gulp.src('./profile/styles/*.css')
         .pipe(csso())
-        .pipe(concat('app.min.css'))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./profile/dist/css'))
         .pipe(notify('css optimized!'));
 });
-gulp.task('compressJs', function() {
-    pump([
-        gulp.src('./profile/scripts/*.js')
-            .pipe(concat('app.min.js')),
-        uglify(),
-        gulp.dest('./profile/dist/js/')
-            .pipe(notify('js compressed!'))
-    ]);
+gulp.task('compressJs', function(cb) {
+    return gulp.src('./profile/scripts/*.js')
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./profile/dist/js'));
 });
 
 gulp.task('watch', function() {
