@@ -1,6 +1,6 @@
 var BOWER_DIR = './bower_components';
 require.config({
-    baseUrl: './kmall',
+    baseUrl: './',
     urlArgs:"version=0.0.1",
     waitSeconds: 0,
     paths: {
@@ -17,11 +17,11 @@ require.config({
         'routes': './scripts/app/routes',
         'intercepter': './scripts/app/intercepter',
 
-        'site-nav': '/directives/common_pages/header',
-        'search-bar': '/directives/common_pages/search-bar',
-        'site-footer': '/directives/common_pages/site-footer',
+        'site-nav': './directives/common_pages/header',
+        'search-bar': './directives/common_pages/search-bar',
+        'site-footer': './directives/common_pages/site-footer',
         //轮播图
-        'kslider': '/directives/common_pages/slider'
+        'kslider': './directives/common_pages/slider'
     },
     map: {
         '*': {
