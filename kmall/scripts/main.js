@@ -1,6 +1,6 @@
 var BOWER_DIR = './bower_components';
 require.config({
-    baseUrl: './',
+    baseUrl: './kmall',
     urlArgs:"version=0.0.1",
     waitSeconds: 0,
     paths: {
