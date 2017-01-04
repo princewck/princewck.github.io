@@ -25,7 +25,7 @@ require.config({
     },
     map: {
         '*': {
-            'css': '//apps.bdimg.com/libs/require-css/0.1.8/css.min.js' // or whatever the path to require-css is
+            'css': 'https://apps.bdimg.com/libs/require-css/0.1.8/css.min.js' // or whatever the path to require-css is
         }
     },
     shim: {
